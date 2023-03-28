@@ -7,10 +7,10 @@
 
   <!-- CSS stylesheet(s) -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
 
   <!-- Library script(s) -->
   <script src="js/libraries/p5.min.js"></script>
-  <script src="js/libraries/p5.sound.min.js"></script>
   <script src="js/libraries/p5.dom.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
@@ -18,11 +18,32 @@
   <script src="js/libraries/jquery-collision.js"></script>
 
   <!-- My script(s) -->
-  <script src="js/script.js"></script>
+  <!-- <script src="js/script.js"></script> -->
 </head>
 
-<body>
-  <button class= "titlePageButton" id = "artistStatementButton" type="button">Read artist's statement</button>
+<body style="margin-right: 7%; margin-left:7%;">
+  
+  <div style="border-style: dotted; border-color: antiquewhite; height: 120vh; ">
+    <img id="iridescentCircle" src="assets/images/iridescent_circle.png"> 
+    <p class="logo">Audrey Coulombe</p>
+    <div class="menuContainer">
+      <button class= "menuSelection" id = "home" type="button">Home</button>
+      <button class= "menuOptions" id = "about" type="button">About</button>
+      <button class= "menuOptions" id = "contact" type="button">Contact</button>
+    </div>
+ 
+    
+    <img id="fashion_icon" class="icon" src="assets/images/icon_fashion.png" style="left: 7vw; top:20vh;"> 
+    <img id="animation_icon" class="icon" src="assets/images/icon_animation.png" style="left: 70vw; top:24vh;">
+    <img id="coding_icon" class="icon" src="assets/images/icon_coding.png" style="left: 35vw; top:66vh;">
+    <img id="electronics_icon" class="icon" src="assets/images/icon_electronics.png" style="left: 15vw; top:55vh;">
+    <img id="graphicDesign_icon" class="icon" src="assets/images/icon_graphicDesign.png" style="left: 75vw; top:60vh;">
+    <img id="VR_icon" class="icon" src="assets/images/icon_VR.png" style="left: 45vw; top:43vh;">
+    <img id="3Dmodeling_icon" class="iconGrey" src="assets/images/icon_3Dmodeling.png" style="left: 51vw; top:18vh;">
+    <img id="3Dprinting_icon" class="iconGrey" src="assets/images/icon_3Dprinting.png"style="left: 30vw; top:29vh;">    
+    <img id="digitalTexts_icon" class="iconGrey" src="assets/images/icon_digitalTexts.png" style="left: 60vw; top:63vh;">
+  </div>
+  <!-- <button class= "titlePageButton" id = "artistStatementButton" type="button">Read artist's statement</button>
   <button class= "titlePageButton" id = "startButton" type="button">Click here to play</button>
   <div id="progressbar"></div>
   <div id="scoreBox">Toilet paper rolls: <br>
@@ -41,7 +62,7 @@
     <div id="player"></div>
   </div>
   <div id="perimeter"></div>
-  <div id="gameoverDialog"></div>
+  <div id="gameoverDialog"></div> -->
 </body>
 
 </html>

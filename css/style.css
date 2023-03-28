@@ -1,0 +1,96 @@
+.icon {
+    width: 14vw;
+    position:absolute;
+}
+
+.iconGrey {
+    width: 10vw;
+    position:absolute;
+}
+
+.logo {
+    /* font-size: 72px; */
+    font-size: 3.5vw;
+    font-family: "Titillium Web Light";
+    color: rgb(111, 111, 110);
+    line-height: 0.375;
+    line-height: 6.4vh;
+    position: absolute;
+    left: 7vw;
+    top: 1.5vh;
+}
+
+#iridescentCircle {
+    /* position: absolute; */
+    /* left: 22.55vw; */
+    /* top: 1.2vh; */
+    width: 55.42vw;
+    max-width: 98.52vh;
+
+ 
+    /* position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); */
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* width: 100%;
+  max-width: 400px;
+  height: auto; */
+
+.menuContainer {
+    float:right;
+    /* background-color: #13b2e2; */
+    border-style: dotted; border-color: antiquewhite;
+    margin-top: 9vh;
+}
+
+.menuOptions {
+    /* background-color: #4CAF50; */
+    border: none;
+    background-color: white;
+    font-family: "Titillium Web";
+    color: rgb(134, 134, 134);
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 1.3vw;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+.menuSelection {
+    /* background-color: #4CAF50; */
+    border: none;
+    background-color: white;
+    font-family: "Titillium Web";
+    color: rgb(227, 178, 200);
+    font-weight: bold;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3vw;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+
+
+/* font-family: 'Titillium Web Light';font-size: 22px;
+font-family: 'Titillium Web Regular';font-size: 22px
+font-family: 'Titillium Web ExtraLight';font-size: 22px;
+font-family: 'Titillium Web SemiBold';font-size: 22px;
+manque bold!!!
+font-family: 'Titillium Web Black';font-size: 22px; */
