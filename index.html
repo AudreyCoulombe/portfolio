@@ -2,38 +2,44 @@
 <html>
 
 <head>
+  <title>Audrey Coulombe</title>
   <meta charset="utf-8">
-  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <meta name="viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
   <!-- CSS stylesheet(s) -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
 
   <!-- Library script(s) -->
-  <script src="js/libraries/p5.min.js"></script>
-  <script src="js/libraries/p5.dom.min.js"></script>
+  <!-- <script src="js/libraries/p5.min.js"></script>
+  <script src="js/libraries/p5.dom.min.js"></script> -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <script src="js/libraries/jquery-collision.js"></script>
 
   <!-- My script(s) -->
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </head>
 
-<body style="margin-right: 7%; margin-left:7%;">
+<!-- <body style="margin-right: 7%; margin-left:7%;"> -->
+<body>
   
-  <div style="border-style: dotted; border-color: antiquewhite; height: 120vh; ">
+  <div id="mainDiv" style="border-style: dotted; border-color: antiquewhite; height: 120vh;">
+    
     <img id="iridescentCircle" src="assets/images/iridescent_circle.png"> 
     <p class="logo">Audrey Coulombe</p>
+    
     <div class="menuContainer">
       <button class= "menuSelection" id = "home" type="button">Home</button>
       <button class= "menuOptions" id = "about" type="button">About</button>
       <button class= "menuOptions" id = "contact" type="button">Contact</button>
     </div>
- 
     
-    <img id="fashion_icon" class="icon" src="assets/images/icon_fashion.png" style="left: 7vw; top:20vh;"> 
+    <!-- <img id="fashion_icon" class="icon" src="assets/images/icon_fashion.png" style="left: 7vw; top:20vh;">  -->
+    <img id="fashion_icon" class="icon" src="assets/images/icon_fashion.png" >
     <img id="animation_icon" class="icon" src="assets/images/icon_animation.png" style="left: 70vw; top:24vh;">
     <img id="coding_icon" class="icon" src="assets/images/icon_coding.png" style="left: 35vw; top:66vh;">
     <img id="electronics_icon" class="icon" src="assets/images/icon_electronics.png" style="left: 15vw; top:55vh;">
@@ -42,7 +48,18 @@
     <img id="3Dmodeling_icon" class="iconGrey" src="assets/images/icon_3Dmodeling.png" style="left: 51vw; top:18vh;">
     <img id="3Dprinting_icon" class="iconGrey" src="assets/images/icon_3Dprinting.png"style="left: 30vw; top:29vh;">    
     <img id="digitalTexts_icon" class="iconGrey" src="assets/images/icon_digitalTexts.png" style="left: 60vw; top:63vh;">
+
+    
+    <!-- <svg class = "icon_lines" id="fashionVR">
+      <line x1="7vw" y1="20vh" x2="45vw" y2="43vh" stroke="black"/>
+      <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
+    </svg> -->
+    <svg class = "icon_lines"></svg>
+
   </div>
+
+
+
   <!-- <button class= "titlePageButton" id = "artistStatementButton" type="button">Read artist's statement</button>
   <button class= "titlePageButton" id = "startButton" type="button">Click here to play</button>
   <div id="progressbar"></div>

@@ -1,11 +1,52 @@
 .icon {
     width: 14vw;
     position:absolute;
-}
+    /* position:fixed; */
+    /* position: relative; */
+    min-width: 76px;
+    /* opacity: 0.5; */
+} 
+
 
 .iconGrey {
     width: 10vw;
     position:absolute;
+    min-width: 64px;
+    /* opacity: 0.5; */
+}
+.icon:hover{
+    width: 20vw;
+    z-index: 20;
+}
+#fashion_icon {
+    /* position:absolute; */
+    /* position:relative; */
+    /* left: 7vw;
+    top:20vh; */
+    animation-name:fashionAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate-reverse; */
+    animation-timing-function:linear;
+    /* --position: v(random(10), random(10)); */
+}
+
+@keyframes fashionAnim {
+    0%   {left:7vw; top:20vh;}
+    25%   {left:8vw; top:21vh;}
+    50%   {left:7vw; top:20vh;}
+    75%   {left:8vw; top:18vh;}
+    100%   {left:7vw; top:20vh;}
+  }
+
+.icon_lines{
+    width: 100vw;
+    height:120vh;
+    z-index: -1;
+    /* position:relative; */
+    /* position: fixed; */
+    position:absolute;
+    border-style: dotted; border-color: antiquewhite;
 }
 
 .logo {
@@ -21,20 +62,8 @@
 }
 
 #iridescentCircle {
-    /* position: absolute; */
-    /* left: 22.55vw; */
-    /* top: 1.2vh; */
     width: 55.42vw;
     max-width: 98.52vh;
-
- 
-    /* position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%); */
 
     margin: 0;
     position: absolute;
@@ -42,6 +71,7 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    z-index: -10;
 }
 
 /* width: 100%;
