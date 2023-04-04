@@ -17,8 +17,8 @@
 }
 
 #mainDiv{
-    border-style: dotted; 
-    border-color: rgb(196, 35, 142); 
+    /* border-style: dotted; */
+    /* border-color: rgb(196, 35, 142); */
     position:relative;
     width:95vw;
     /* display:block;
@@ -30,14 +30,14 @@
 }
 
 #iconsDiv{
-    height:80%; 
+    height:80%;
     /* height: auto;
     display:block;
     overflow: auto; */
     /* width: 90vw; */
     width: 100%;
-    border-style: dotted; 
-    border-color: rgb(32, 131, 83); 
+    /* border-style: dotted; */
+    /* border-color: rgb(32, 131, 83); */
     margin: 0;
     position: absolute;
     top: 20%;
@@ -56,7 +56,7 @@
     /* opacity: 0.5; */
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-} 
+}
 
 
 .iconGrey {
@@ -78,7 +78,7 @@
     left: 11%;
     top:15%;
     animation-name:fashionAnim;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     /* animation-direction: alternate-reverse; */
     animation-timing-function:linear;
@@ -86,11 +86,11 @@
 }
 
 @keyframes fashionAnim {
-    /* 0%   {left:7%; top:2%;}
-    25%   {left:8%; top:3%;}
-    50%   {left:7%; top:2%;}
-    75%   {left:8%; top:0%;}
-    100%   {left:7%; top:2%;} */
+    0%   {left:11%; top:15%;}
+    25%   {left:15%; top:18%;}
+    50%   {left:11%; top:15%;}
+    75%   {left:12%; top:10%;}
+    100%   {left:11%; top:15%;}
   }
 
 .icon_lines{
@@ -98,10 +98,8 @@
     /* height:95vh; */
     height:100%;
     z-index: -1;
-    /* position:relative; */
-    /* position: fixed; */
-    /* position:absolute; */
-    border-style: dotted; border-color: antiquewhite;
+    /* border-style: dotted;
+    border-color: antiquewhite; */
 }
 
 .logo {
@@ -124,7 +122,7 @@
 .menuContainer {
     float:right;
     /* background-color: #13b2e2; */
-    border-style: dotted; border-color: antiquewhite;
+    /* border-style: dotted; border-color: antiquewhite; */
     margin-top: 9vh;
 }
 

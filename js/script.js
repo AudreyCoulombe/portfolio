@@ -102,12 +102,19 @@ $(document).ready(function () {
       //icons[key].style.left = "50%";
       //icons[key].style.top = "41%";
       //icons[key].style.zIndex = "100";
-      
+
       // icons[key].style.top = "17%";
-      document.location.href = "fashion.html";
+      // document.location.href = "fashion.html";
+
 
       // var e = document.getElementById('foo');
       // e.style.display = ((e.style.display != 'none') ? 'none' : 'block');
+      document.getElementById("fashionProjects").style.display = "block";
+      document.getElementById("fashionProjects").onclick=function(){
+        document.getElementById("auroraImage").style.display = "block";
+        document.getElementById("fashionProjects").style.display = "none";
+        console.log("auroraImage clicked");
+      };
     };
   });
 
@@ -123,10 +130,16 @@ $(document).ready(function () {
   //   console.log(Object.values(lines)[1].iconB);
 
   // Run the updateLinePos function every 5 millis
+
   setInterval(updateLinePos, 5);
   setInterval(updateIconPos, 1000);
   // updateIconPos();
 });
+
+function showAurora(){
+  document.getElementById("auroraImage").style.display = "block";
+  console.log("clicked");
+}
 
 // function to create new svg lines
 function createLine() {
@@ -138,7 +151,7 @@ function createLine() {
 }
 
 function updateIconPos() {
-  
+
   // Object.keys(icons).forEach(function (key) {
   //   let velocityX = Math.random() * 0.01;
   //   let velocityY = Math.random() * 0.01;
