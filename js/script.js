@@ -99,12 +99,12 @@ $(document).ready(function () {
     };
     icons[key].onclick = function() {
       icons[key].style.width = "17%";
-      icons[key].style.left = "50%";
-      icons[key].style.top = "41%";
-      icons[key].style.zIndex = "100";
+      //icons[key].style.left = "50%";
+      //icons[key].style.top = "41%";
+      //icons[key].style.zIndex = "100";
       
       // icons[key].style.top = "17%";
-      // document.location.href = "fashion.html";
+      document.location.href = "fashion.html";
 
       // var e = document.getElementById('foo');
       // e.style.display = ((e.style.display != 'none') ? 'none' : 'block');
