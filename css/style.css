@@ -1,28 +1,82 @@
+#iridescentCircle {
+    /* width: 55.42vw;
+    max-width: 98.52vh; */
+    /* width: 55.42vw; */
+    height: 98.52vh;
+    max-height: 100vw;
+
+    margin: 0;
+    position: absolute;
+    /* position: sticky; */
+    /* position: fixed; */
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+#mainDiv{
+    border-style: dotted; 
+    border-color: rgb(196, 35, 142); 
+    position:relative;
+    width:95vw;
+    /* display:block;
+    overflow: auto; */
+    height:95vh;
+    left:50vw;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#iconsDiv{
+    height:80%; 
+    /* height: auto;
+    display:block;
+    overflow: auto; */
+    /* width: 90vw; */
+    width: 100%;
+    border-style: dotted; 
+    border-color: rgb(32, 131, 83); 
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    /* left:50vw;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); */
+}
+
 .icon {
-    width: 14vw;
+    /* width: 14vw; */
+    width:13%;
     position:absolute;
     /* position:fixed; */
     /* position: relative; */
-    min-width: 76px;
+    min-width: 96px;
     /* opacity: 0.5; */
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 } 
 
 
 .iconGrey {
-    width: 10vw;
+    width: 9%;
     position:absolute;
     min-width: 64px;
     /* opacity: 0.5; */
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .icon:hover{
-    width: 20vw;
+    width: 17%;
     z-index: 20;
 }
+
 #fashion_icon {
     /* position:absolute; */
     /* position:relative; */
-    /* left: 7vw;
-    top:20vh; */
+    left: 11%;
+    top:15%;
     animation-name:fashionAnim;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -32,26 +86,28 @@
 }
 
 @keyframes fashionAnim {
-    0%   {left:7vw; top:20vh;}
-    25%   {left:8vw; top:21vh;}
-    50%   {left:7vw; top:20vh;}
-    75%   {left:8vw; top:18vh;}
-    100%   {left:7vw; top:20vh;}
+    /* 0%   {left:7%; top:2%;}
+    25%   {left:8%; top:3%;}
+    50%   {left:7%; top:2%;}
+    75%   {left:8%; top:0%;}
+    100%   {left:7%; top:2%;} */
   }
 
 .icon_lines{
-    width: 100vw;
-    height:120vh;
+    width: 100%;
+    /* height:95vh; */
+    height:100%;
     z-index: -1;
     /* position:relative; */
     /* position: fixed; */
-    position:absolute;
+    /* position:absolute; */
     border-style: dotted; border-color: antiquewhite;
 }
 
 .logo {
     /* font-size: 72px; */
-    font-size: 3.5vw;
+    /* font-size: 3.5vw; */
+    font-size: max(3.5vw, 18px);
     font-family: "Titillium Web Light";
     color: rgb(111, 111, 110);
     line-height: 0.375;
@@ -59,19 +115,6 @@
     position: absolute;
     left: 7vw;
     top: 1.5vh;
-}
-
-#iridescentCircle {
-    width: 55.42vw;
-    max-width: 98.52vh;
-
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: -10;
 }
 
 /* width: 100%;
@@ -95,7 +138,8 @@
     text-align: center;
     text-decoration: none;
     /* display: inline-block; */
-    font-size: 1.3vw;
+    /* font-size: 1.3vw; */
+    font-size: max(1.3vw, 14px);
     margin-left: 2vw;
     cursor: pointer;
 }
@@ -111,7 +155,8 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.3vw;
+    /* font-size: 1.3vw; */
+    font-size: max(1.3vw, 14px);
     margin-left: 2vw;
     cursor: pointer;
 }

@@ -88,6 +88,32 @@ $(document).ready(function () {
     },
   };
 
+  Object.keys(icons).forEach(function (key) {
+    icons[key].onmouseover = function() {
+      console.log("mouse over");
+      // Here: display list of projects at bottom
+    };
+    icons[key].onmouseout = function() {
+      console.log("mouse out");
+      // Here: hide list of projects at bottom
+    };
+    icons[key].onclick = function() {
+      icons[key].style.width = "17%";
+      icons[key].style.left = "50%";
+      icons[key].style.top = "41%";
+      icons[key].style.zIndex = "100";
+      
+      // icons[key].style.top = "17%";
+      // document.location.href = "fashion.html";
+
+      // var e = document.getElementById('foo');
+      // e.style.display = ((e.style.display != 'none') ? 'none' : 'block');
+    };
+  });
+
+  // onmouseover="mouseOverIcon(this)" onmouseout="mouseOutIcon(this)"
+  // document.getElementById("demo").onclick = function() {myFunction()};
+
   // *****Rappel de comment naviguer dans les objects:*****
   //   console.log(Object.values(lines).length);
   //   console.log(Object.keys(lines)[1]);
@@ -113,63 +139,13 @@ function createLine() {
 
 function updateIconPos() {
   
-  Object.keys(icons).forEach(function (key) {
-    // let x = icons[key].offsetLeft;
-    // let y = icons[key].offsetTop;
-    let velocityX = Math.random() * 0.01;
-    let velocityY = Math.random() * 0.01;
-    // let viewWidth = document.documentElement.clientWidth;
-    // let newX = x + viewWidth*velocityX;
-    // console.log(x + " + " + viewWidth + " * " + velocityX + " = " + newX);
-    // icons[key].setAttribute("left", newX+"px");
-    // console.log(icons[key]);
-    // icons[key].setAttribute("left", "400px");
-    // 1px = (100vw / [document.documentElement.clientWidth] px)
-    // let position = icons[key].offset();
-    // console.log(Object.values(lines)[1]);
-    
-
-    let xPos = icons[key].offsetLeft;
-    let yPos = icons[key].offsetTop;
-    // console.log(xPos);
-    // icons[key].offset({
-    //   top: 10,
-    //   left: 10
-    // });
-    icons[key].style.top = `${yPos + velocityX}px`;
-    // icons[key].offset({
-    //   top: position.top + 10,
-    //   left: position.left + 10
-    // });
-    
-    // this.x = x;
-    // this.y = y;
-    // // Velocity and speed
-    // this.vx = 0;
-    // this.vy = 0;
-    // this.speed = speed;
-    // // Time properties for noise() function
-    // this.tx = random(0, 1000); // To make x and y noise different
-    // this.ty = random(0, 1000); // we use random starting values
-    // // Health properties
-    // this.maxHealth = radius;
-    // this.health = this.maxHealth; // Must be AFTER defining this.maxHealth
-    // // Display properties
-    // this.fillColor = fillColor;
-    // this.radius = this.health;
-
-
-    // // Set velocity via noise()
-    // this.vx = map(noise(this.tx), 0, 1, -this.speed, this.speed);
-    // this.vy = map(noise(this.ty), 0, 1, -this.speed, this.speed);
-    // // Update position
-    // this.x += this.vx;
-    // this.y += this.vy;
-    // // Update time properties
-    // this.tx += 0.01;
-    // this.ty += 0.01;
-    
-  });
+  // Object.keys(icons).forEach(function (key) {
+  //   let velocityX = Math.random() * 0.01;
+  //   let velocityY = Math.random() * 0.01;
+  //   let xPos = icons[key].offsetLeft;
+  //   let yPos = icons[key].offsetTop;
+  //   icons[key].style.top = `${yPos + velocityX}px`;
+  // });
 }
 
 // function to update the position of the lines according to the position of the icons
@@ -180,15 +156,10 @@ function updateLinePos() {
     let line = lines[key].line;
     let iconA = lines[key].iconA;
     let iconB = lines[key].iconB;
-    // Variables for center X and Y positions of icon A and B
-    let iconAcenterX = iconA.offsetLeft + iconA.offsetWidth / 2;
-    let iconAcenterY = iconA.offsetTop + iconA.offsetHeight / 2;
-    let iconBcenterX = iconB.offsetLeft + iconB.offsetWidth / 2;
-    let iconBcenterY = iconB.offsetTop + iconB.offsetHeight / 2;
     // Place the tips of the line according to icon A and B's position
-    line.setAttribute("x1", iconAcenterX);
-    line.setAttribute("y1", iconAcenterY);
-    line.setAttribute("x2", iconBcenterX);
-    line.setAttribute("y2", iconBcenterY);
+    line.setAttribute("x1", iconA.offsetLeft);
+    line.setAttribute("y1", iconA.offsetTop);
+    line.setAttribute("x2", iconB.offsetLeft);
+    line.setAttribute("y2", iconB.offsetTop);
   });
 }
