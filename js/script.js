@@ -88,38 +88,40 @@ $(document).ready(function () {
     },
   };
 
-  Object.keys(icons).forEach(function (key) {
-    icons[key].onmouseover = function() {
+  // For each keys in the icons object...
+  Object.keys(icons).forEach(function (actualKey) {
+
+    // When the mouse is over the icon...
+    icons[actualKey].onmouseover = function () {
       console.log("mouse over");
       // Here: display list of projects at bottom
     };
-    icons[key].onmouseout = function() {
+
+    // When the mouse goes out the icon...
+    icons[actualKey].onmouseout = function () {
       console.log("mouse out");
       // Here: hide list of projects at bottom
     };
-    icons[key].onclick = function() {
-      icons[key].style.width = "17%";
-      //icons[key].style.left = "50%";
-      //icons[key].style.top = "41%";
-      //icons[key].style.zIndex = "100";
 
-      // icons[key].style.top = "17%";
-      // document.location.href = "fashion.html";
+    // When the icon is clicked...
+    icons[actualKey].onclick = function () {
+      let clickedIcon = actualKey;
+      // Change css of the clicked icon
+      icons[clickedIcon].style.width = "40%";
 
-
-      // var e = document.getElementById('foo');
-      // e.style.display = ((e.style.display != 'none') ? 'none' : 'block');
-      document.getElementById("fashionProjects").style.display = "block";
-      document.getElementById("fashionProjects").onclick=function(){
-        document.getElementById("auroraImage").style.display = "block";
-        document.getElementById("fashionProjects").style.display = "none";
-        console.log("auroraImage clicked");
-      };
+      // For each keys in the icon object...
+      Object.keys(icons).forEach(function (iconKey) {
+        // If it's not the clicked icon, make it fade
+        if (iconKey != clickedIcon) {
+          fading(icons[iconKey]);
+        }
+      });
+      // Also make all the lines fade
+      Object.keys(lines).forEach(function (lineKey) {
+        fading(lines[lineKey].line);
+      });
     };
   });
-
-  // onmouseover="mouseOverIcon(this)" onmouseout="mouseOutIcon(this)"
-  // document.getElementById("demo").onclick = function() {myFunction()};
 
   // *****Rappel de comment naviguer dans les objects:*****
   //   console.log(Object.values(lines).length);
@@ -130,13 +132,31 @@ $(document).ready(function () {
   //   console.log(Object.values(lines)[1].iconB);
 
   // Run the updateLinePos function every 5 millis
-
   setInterval(updateLinePos, 5);
   setInterval(updateIconPos, 1000);
   // updateIconPos();
 });
 
-function showAurora(){
+// function to make fadingElement fade and then stop displaying it
+function fading(fadingElement) {
+  let opacity = 1;
+  // Interval to change opacity every 10 millis
+  let opacityChange = setInterval(function () {
+    // If opacity is smaller or equal to 0...
+    if (opacity <= 0) {
+      // Stop the changing the opacity
+      clearInterval(opacityChange);
+      // Stop displaying the element
+      fadingElement.style.display = "none";
+    }
+    // Subtract 0.01 from opacity value
+    opacity -= 0.01;
+    // Assign new opacity value to element
+    fadingElement.style.opacity = opacity;
+  }, 10);
+}
+
+function showAurora() {
   document.getElementById("auroraImage").style.display = "block";
   console.log("clicked");
 }
@@ -151,7 +171,6 @@ function createLine() {
 }
 
 function updateIconPos() {
-
   // Object.keys(icons).forEach(function (key) {
   //   let velocityX = Math.random() * 0.01;
   //   let velocityY = Math.random() * 0.01;

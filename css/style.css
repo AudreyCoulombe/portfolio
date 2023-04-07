@@ -17,10 +17,10 @@
 }
 
 #mainDiv{
-    /* border-style: dotted; */
-    /* border-color: rgb(196, 35, 142); */
+    border-style: dotted;
+    border-color: rgb(196, 35, 142);
     position:relative;
-    width:95vw;
+    width:97vw;
     /* display:block;
     overflow: auto; */
     height:95vh;
@@ -31,19 +31,15 @@
 
 #iconsDiv{
     height:80%;
-    /* height: auto;
-    display:block;
-    overflow: auto; */
-    /* width: 90vw; */
-    width: 100%;
-    /* border-style: dotted; */
-    /* border-color: rgb(32, 131, 83); */
+    width: 80%;
+    /* border-style: dotted;
+    border-color: rgb(32, 131, 83); */
     margin: 0;
     position: absolute;
     top: 20%;
-    /* left:50vw;
+    left:48vw;
     -ms-transform: translateX(-50%);
-    transform: translateX(-50%); */
+    transform: translateX(-50%);
 }
 
 .icon {
@@ -79,7 +75,7 @@
     top:15%;
     animation-name:fashionAnim;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
+    /* animation-iteration-count: infinite; */
     /* animation-direction: alternate-reverse; */
     animation-timing-function:linear;
     /* --position: v(random(10), random(10)); */
@@ -87,8 +83,8 @@
 
 @keyframes fashionAnim {
     0%   {left:11%; top:15%;}
-    25%   {left:15%; top:18%;}
-    50%   {left:11%; top:15%;}
+    25%   {left:13%; top:17%;}
+    50%   {left:9%; top:13%;}
     75%   {left:12%; top:10%;}
     100%   {left:11%; top:15%;}
   }
@@ -112,7 +108,9 @@
     line-height: 6.4vh;
     position: absolute;
     left: 7vw;
-    top: 1.5vh;
+    margin-top: 5%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 /* width: 100%;
@@ -122,8 +120,10 @@
 .menuContainer {
     float:right;
     /* background-color: #13b2e2; */
-    /* border-style: dotted; border-color: antiquewhite; */
-    margin-top: 9vh;
+    border-style: dotted; border-color: antiquewhite;
+    margin-top: 5%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .menuOptions {
@@ -159,7 +159,13 @@
     cursor: pointer;
 }
 
-
+.projectsContainer {
+    float:right;
+    /* background-color: #13b2e2; */
+    border-style: dotted; border-color: antiquewhite;
+    /* margin-top: 9vh; */
+    margin-top: 3%;
+}
 
 /* font-family: 'Titillium Web Light';font-size: 22px;
 font-family: 'Titillium Web Regular';font-size: 22px
