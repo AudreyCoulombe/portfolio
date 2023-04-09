@@ -2,54 +2,64 @@
     /* width: 55.42vw;
     max-width: 98.52vh; */
     /* width: 55.42vw; */
-    height: 98.52vh;
+    height: 95vh;
     max-height: 100vw;
 
     margin: 0;
+    padding-top: 1%;
     position: absolute;
     /* position: sticky; */
     /* position: fixed; */
     top: 50%;
     left: 50%;
+    /* left:60%; */
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: -10;
+    animation-name:iridescenceAnim;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    opacity: 0.7;
+}
+
+@keyframes iridescenceAnim {
+0%   {filter:contrast(100%) hue-rotate(0deg) saturate(300%) drop-shadow(5px 5px 5px rgb(0, 0, 0));}
+100%   {filter:contrast(100%) hue-rotate(360deg) saturate(300%) drop-shadow(5px 5px 5px rgb(0, 0, 0));}
 }
 
 #mainDiv{
-    border-style: dotted;
-    border-color: rgb(196, 35, 142);
+    /* border-style: dotted;
+    border-color: rgb(196, 35, 142); */
     position:relative;
     width:97vw;
     /* display:block;
     overflow: auto; */
-    height:95vh;
+    height:98vh;
     left:50vw;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
 #iconsDiv{
-    height:80%;
-    width: 80%;
+    height:85%;
+    width: 70%;
     /* border-style: dotted;
     border-color: rgb(32, 131, 83); */
     margin: 0;
     position: absolute;
-    top: 20%;
-    left:48vw;
+    top: 15%;
+    left:50%;
+    /* left:60%; */
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
 .icon {
-    /* width: 14vw; */
     width:13%;
     position:absolute;
-    /* position:fixed; */
-    /* position: relative; */
     min-width: 96px;
-    /* opacity: 0.5; */
+    opacity: 1;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -66,19 +76,15 @@
 .icon:hover{
     width: 17%;
     z-index: 20;
+    cursor: pointer;
 }
 
-#fashion_icon {
-    /* position:absolute; */
-    /* position:relative; */
+/* #fashion_icon {
     left: 11%;
     top:15%;
     animation-name:fashionAnim;
     animation-duration: 6s;
-    /* animation-iteration-count: infinite; */
-    /* animation-direction: alternate-reverse; */
     animation-timing-function:linear;
-    /* --position: v(random(10), random(10)); */
 }
 
 @keyframes fashionAnim {
@@ -87,41 +93,48 @@
     50%   {left:9%; top:13%;}
     75%   {left:12%; top:10%;}
     100%   {left:11%; top:15%;}
+  } */
+
+  .iconClicked {
+    width: 17%;
+    animation-name:iconClickedAnim;
+    animation-duration: 1s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+}
+  @keyframes iconClickedAnim {
+    100%   {left:-2%; top:50%;}
   }
 
-.icon_lines{
+#icon_lines{
     width: 100%;
-    /* height:95vh; */
     height:100%;
     z-index: -1;
-    /* border-style: dotted;
-    border-color: antiquewhite; */
+    border-style: dotted;
+    border-color: antiquewhite;
+    
 }
 
 .logo {
-    /* font-size: 72px; */
-    /* font-size: 3.5vw; */
     font-size: max(3.5vw, 18px);
     font-family: "Titillium Web Light";
     color: rgb(111, 111, 110);
     line-height: 0.375;
     line-height: 6.4vh;
     position: absolute;
-    left: 7vw;
+    left: 4%;
     margin-top: 5%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-/* width: 100%;
-  max-width: 400px;
-  height: auto; */
-
 .menuContainer {
     float:right;
     /* background-color: #13b2e2; */
-    border-style: dotted; border-color: antiquewhite;
+    /* border-style: dotted; border-color: antiquewhite; */
     margin-top: 5%;
+    margin-right: 4%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -147,7 +160,8 @@
     border: none;
     background-color: white;
     font-family: "Titillium Web";
-    color: rgb(227, 178, 200);
+    color: rgb(255, 95, 226);
+    /* color: rgb(227, 178, 200); */
     font-weight: bold;
     padding: 0px 0px;
     text-align: center;
@@ -159,17 +173,131 @@
     cursor: pointer;
 }
 
-.projectsContainer {
-    float:right;
-    /* background-color: #13b2e2; */
-    border-style: dotted; border-color: antiquewhite;
-    /* margin-top: 9vh; */
-    margin-top: 3%;
-}
-
 /* font-family: 'Titillium Web Light';font-size: 22px;
 font-family: 'Titillium Web Regular';font-size: 22px
 font-family: 'Titillium Web ExtraLight';font-size: 22px;
 font-family: 'Titillium Web SemiBold';font-size: 22px;
 manque bold!!!
 font-family: 'Titillium Web Black';font-size: 22px; */
+
+#otherFields {
+    position:absolute;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width:5vw;
+    min-width: 60px;
+    height:auto;
+    top:50%;
+    left:12%;
+    justify-content: space-evenly;
+    border-style: dotted; border-color: antiquewhite;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.fields{
+    width:5vw;
+    min-width: 60px;
+    height:5vw;
+    min-height: 60px;
+    /* background-color: #e4bafa; */
+    background-color: rgb(128, 128, 128);
+    /* background-color: #ed8bd8; */
+    border-radius: 100%;
+    text-align: center;
+    display:none;
+    opacity: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px 0px;
+    /* -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) */
+}
+
+.fields p {
+   color: white;
+   padding-top: 15%;
+   font-family: 'Titillium Web Regular';
+   font-size: max(1vw, 12px);
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeInAnim 2s linear;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    /* display: block; */
+    display:inline-block;
+}
+
+@keyframes fadeInAnim {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+/* #projectsIcons{
+    position:relative;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width:63%;
+    min-width: 60px;
+    height:85%;
+    top:15%;
+    left:33%;
+    justify-content: space-evenly;
+    border-style: dotted; border-color: rgb(255, 0, 230);
+} */
+
+#projIconsDiv{
+    position:absolute;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width:90%;
+    /* min-width: 60px; */
+    height:0px;
+    top:50%;
+    left:25%;
+    justify-content: space-evenly;
+    border-style: dotted; border-color: rgb(255, 0, 230);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.projectsIcon{
+    position:relative;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /* -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    top: 50%;
+
+    opacity: 0;
+    animation-name:iridescenceAnim, fadeInSmoothAnim;
+    animation-duration: 8s, 2s;
+    animation-iteration-count: infinite, 1;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
+    /* animation-delay: 0s, 1.5s; */
+    /* opacity: 0.5; */
+    filter:contrast(100%) hue-rotate(0deg) saturate(300%) drop-shadow(5px 5px 5px rgb(0, 0, 0));
+}
+
+@keyframes fadeInSmoothAnim {
+    0% { opacity: 0 }
+    100% { opacity: 0.8 }
+  }
+
+.projectsIcon:hover{
+    -ms-transform: translateY(-50%) scale(1.5);
+    transform: translateY(-50%) scale(1.5);
+    z-index: 6000;
+    cursor: pointer;
+}
+
+#aura_bgIcon {
+    left:-2%; 
+    top:50%;
+    width:18%;
+    z-index: -500;
+    filter:contrast(100%) hue-rotate(0deg) saturate(800%) blur(20px);
+}
