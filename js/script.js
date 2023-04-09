@@ -23,7 +23,13 @@ $(document).ready(function () {
   icons = {
     fashion: {
       icon: document.getElementById("fashion_icon"),
-      idRelatedFields: ["electronics_field", "coding_field", "3Dmodeling_field", "3Dprinting_field"],
+      idRelatedFields: [
+        "fashion_field",
+        "electronics_field",
+        "coding_field",
+        "3Dmodeling_field",
+        "3Dprinting_field",
+      ],
       projects: {
         printedTextiles: {
           iconImgSrc: "./assets/images/printedTextiles_icon.png",
@@ -31,7 +37,8 @@ $(document).ready(function () {
           projectTitle: "Research-Creation on 3D Printed Textiles",
           projectYear: "2021",
           projectMedium: "TPU | Illustrator, Blender, Cura",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
           projectRelatedFields: ["3Dmodeling_field", "3Dprinting_field"],
         },
         vitalFatal: {
@@ -39,9 +46,16 @@ $(document).ready(function () {
           projectImgsSrcs: ["./assets/images/x.png"],
           projectTitle: "Vital/Fatal",
           projectYear: "2020",
-          projectMedium: "Fabric, 3D printed PLA, electronics | Arduino IDE, Blender, Cura",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.x",
-          projectRelatedFields: ["electronics_field", "coding_field", "3Dmodeling_field", "3Dprinting_field"],
+          projectMedium:
+            "Fabric, 3D printed PLA, electronics | Arduino IDE, Blender, Cura",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.x",
+          projectRelatedFields: [
+            "electronics_field",
+            "coding_field",
+            "3Dmodeling_field",
+            "3Dprinting_field",
+          ],
         },
         aurora: {
           iconImgSrc: "./assets/images/aurora_icon.png",
@@ -49,7 +63,8 @@ $(document).ready(function () {
           projectTitle: "Aurora",
           projectYear: "2018",
           projectMedium: "Fabric, electronics, fiber optic",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
           projectRelatedFields: ["electronics_field", "coding_field"],
         },
         // burdenedMind: {},
@@ -70,7 +85,7 @@ $(document).ready(function () {
     },
     animation: {
       icon: document.getElementById("animation_icon"),
-      idRelatedFields: ["digitalTexts_field"],
+      idRelatedFields: ["animation_field","digitalTexts_field","graphicDesign_field"],
       projects: {
         ModernTimes: {
           iconImgSrc: "",
@@ -79,14 +94,15 @@ $(document).ready(function () {
           projectTitle: "Modern Times",
           projectYear: "2022",
           projectMedium: "Adobe Premiere, Adobe After Effects",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
           projectRelatedFields: ["digitalTexts_field"],
         },
       },
     },
     graphDesign: {
       icon: document.getElementById("graphicDesign_icon"),
-      idRelatedFields: ["digitalTexts_field"],
+      idRelatedFields: ["graphicDesign_field","digitalTexts_field"],
       projects: {
         listenVSspeak: {
           iconImgSrc: "./assets/images/x.png",
@@ -94,7 +110,8 @@ $(document).ready(function () {
           projectTitle: "I Listen More Than I Speak",
           projectYear: "2022",
           projectMedium: "Illustrator, Photoshop",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
           projectRelatedFields: ["digitalTexts_field"],
         },
         // TimesNewRoman: {},
@@ -107,16 +124,22 @@ $(document).ready(function () {
     },
     vr: {
       icon: document.getElementById("VR_icon"),
-      idRelatedFields: ["coding_field", "animation_field", "3Dmodeling_field"],
+      idRelatedFields: ["VR_field","coding_field", "animation_field", "3Dmodeling_field"],
       projects: {
         energyBeings: {
           iconImgSrc: "./assets/images/x.png",
           projectImgsSrcs: ["./assets/images/x.png"],
           projectTitle: "We Are All Energy Beings",
           projectYear: "2022",
-          projectMedium: "Oculus Quest 2 | Unity, Blender, Touch Designer, photogrammetry",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
-          projectRelatedFields: ["coding_field", "animation_field", "3Dmodeling_field"],
+          projectMedium:
+            "Oculus Quest 2 | Unity, Blender, Touch Designer, photogrammetry",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectRelatedFields: [
+            "coding_field",
+            "animation_field",
+            "3Dmodeling_field",
+          ],
         },
         virtualSurreality: {
           iconImgSrc: "./assets/images/x.png",
@@ -124,14 +147,19 @@ $(document).ready(function () {
           projectTitle: "Virtual Surreality",
           projectYear: "2022",
           projectMedium: "Oculus Quest 2 | Unity, Blender, Substance Painter",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
-          projectRelatedFields: ["coding_field", "animation_field", "3Dmodeling_field"],
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectRelatedFields: [
+            "coding_field",
+            "animation_field",
+            "3Dmodeling_field",
+          ],
         },
       },
     },
     coding: {
       icon: document.getElementById("coding_icon"),
-      idRelatedFields: ["digitalTexts_field"],
+      idRelatedFields: ["coding_field","digitalTexts_field"],
       projects: {
         algorithmicPortrait: {
           iconImgSrc: "./assets/images/x.png",
@@ -139,23 +167,30 @@ $(document).ready(function () {
           projectTitle: "Algorithmic Portrait",
           projectYear: "2022",
           projectMedium: "Node.js, DALL·E Mini, javascript, html, css",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
           projectRelatedFields: ["digitalTexts_field"],
         },
       },
     },
     electronics: {
       icon: document.getElementById("electronics_icon"),
-      idRelatedFields: ["coding_field", "3Dprinting_field", "3Dmodeling_field"],
+      idRelatedFields: ["electronics_field","coding_field", "3Dprinting_field", "3Dmodeling_field"],
       projects: {
         fentalert: {
           iconImgSrc: "./assets/images/x.png",
           projectImgsSrcs: ["./assets/images/x.png"],
           projectTitle: "Fentalert",
           projectYear: "2022",
-          projectMedium: "Electronics, 3D printed PLA, crafted lab equipment, sound card | Arduino IDE, Blender, Cura, Reaper",
-          projectDescription: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
-          projectRelatedFields: ["coding_field", "3Dprinting_field", "3Dmodeling_field"],
+          projectMedium:
+            "Electronics, 3D printed PLA, crafted lab equipment, sound card | Arduino IDE, Blender, Cura, Reaper",
+          projectDescription:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla faci Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
+          projectRelatedFields: [
+            "coding_field",
+            "3Dprinting_field",
+            "3Dmodeling_field",
+          ],
         },
       },
     },
@@ -231,24 +266,28 @@ $(document).ready(function () {
 
   // For each keys in the icons object...
   Object.keys(icons).forEach(function (actualKey) {
+    let actualIcon = icons[actualKey].icon;
     // When the mouse is over the icon...
-    icons[actualKey].icon.onmouseover = function () {
+    actualIcon.onmouseover = function () {
       console.log("mouse over");
       // Here: display list of projects at bottom
     };
 
     // When the mouse goes out the icon...
-    icons[actualKey].icon.onmouseout = function () {
+    actualIcon.onmouseout = function () {
       console.log("mouse out");
       // Here: hide list of projects at bottom
     };
 
-    // When the icon is clicked...
-    icons[actualKey].icon.onclick = function () {
-      iconClicked(actualKey);
-      showfieldLines(actualKey); // ISSUE!
-      displayProjects(actualKey);
-    };
+    // If the icon has the class "icon" (if it's not a dark grey icon)...
+    if (actualIcon.classList.contains("icon")) {
+      // Add a click event listener
+      actualIcon.onclick = function () {
+        iconClicked(actualKey);
+        showRelatedFields(actualKey);
+        displayPrjsIcons(actualKey);
+      };
+    }
   });
 
   // *****Rappel de comment naviguer dans les objects:*****
@@ -266,9 +305,15 @@ $(document).ready(function () {
 });
 
 function iconClicked(clickedIcon) {
-  // Add a css class to animate the icon (goes to the left)
-  icons[clickedIcon].icon.classList.add("iconClicked");
-  document.getElementById("aura_bgIcon").classList.add("fadeIn");
+  // // Add a css class to animate the icon (goes to the left)
+  // icons[clickedIcon].icon.classList.add("iconClicked");
+  // document.getElementById("aura_bgIcon").classList.add("fadeIn");
+  
+  setTimeout(function(){
+    fadeOut(icons[clickedIcon].icon);
+  },800);
+  
+
   // For each keys in the icon object...
   Object.keys(icons).forEach(function (iconKey) {
     // If it's not the clicked icon, make it fade out
@@ -284,20 +329,31 @@ function iconClicked(clickedIcon) {
   fadeOut(document.getElementById("iridescentCircle"));
 }
 
-function showfieldLines(actualKey) {
+function showRelatedFields(actualKey) {
   // Assign related fields IDs to a variable
   let relatedFieldsID = icons[actualKey].idRelatedFields;
   // For every related field...  add a css class to make it fade in and create a new line
   for (let i = 0; i < relatedFieldsID.length; i++) {
     // Create a new line
-    let line = createLine();
-    let mainIcon = icons[actualKey].icon;
+    // let line = createLine();
+    // let mainIcon = icons[actualKey].icon;
     let relatedIcon = document.getElementById(relatedFieldsID[i]);
 
-    line.setAttribute("opacity", "0");
+    // If we are at the first related field (which should be the main field)...
+    if (i == 0) {
+      let fieldsDiv = document.getElementById("otherFields");
+      fieldsDiv.insertBefore(relatedIcon, fieldsDiv.firstChild);
+      relatedIcon.classList.remove("fields");
+      relatedIcon.classList.add("mainField");
+      // relatedIcon.style.backgroundColor = "rgb(128, 128, 128)";
+    }
+    
+
+
+    // line.setAttribute("opacity", "0");
     // Add a css class that makes the related field and the line fade in
     relatedIcon.classList.add("fadeIn");
-    line.classList.add("fadeIn");
+    // line.classList.add("fadeIn");
 
     // ARCHIVES: TESTS FOR POSITIONING LINE
     // let $relatedIconPos = $(`#${relatedFieldsID[i]}`).position();
@@ -310,54 +366,51 @@ function showfieldLines(actualKey) {
     // let iconsDiv = document.getElementById("iconsDiv");
     // let fieldsDiv = document.getElementById("otherFields");
 
-    let linesDivPos = document
-      .getElementById("icon_lines")
-      .getBoundingClientRect();
-    let relatedIconPos = relatedIcon.getBoundingClientRect();
-    let xPos = relatedIconPos.width / 2 + relatedIconPos.x - linesDivPos.x;
-    let yPos = relatedIconPos.height / 2 + relatedIconPos.y - linesDivPos.y;
+    // let linesDivPos = document.getElementById("icon_lines").getBoundingClientRect();
+    // let relatedIconPos = relatedIcon.getBoundingClientRect();
+    // let xPos = relatedIconPos.width / 2 + relatedIconPos.x - linesDivPos.x;
+    // let yPos = relatedIconPos.height / 2 + relatedIconPos.y - linesDivPos.y;
 
-    // Update the position of the lines according to the position of the related fields
-    setInterval(function () {
-      line.setAttribute("x1", mainIcon.offsetLeft);
-      line.setAttribute("y1", mainIcon.offsetTop);
-      line.setAttribute("x2", xPos); // ISSUE!
-      line.setAttribute("y2", yPos); // ISSUE!
-      // line.setAttribute("x2", relatedIconPos.left);
-      // line.setAttribute("y2", relatedIconPos.top);
-    }, 5);
+    // // Update the position of the lines according to the position of the related fields
+    // setInterval(function () {
+    //   line.setAttribute("x1", mainIcon.offsetLeft);
+    //   line.setAttribute("y1", mainIcon.offsetTop);
+    //   line.setAttribute("x2", xPos); // ISSUE!
+    //   line.setAttribute("y2", yPos); // ISSUE!
+    //   // line.setAttribute("x2", relatedIconPos.left);
+    //   // line.setAttribute("y2", relatedIconPos.top);
+    // }, 5);
   }
 }
 
-function displayProjects(actualKey) {
-
+function displayPrjsIcons(actualKey) {
   let projectKeys = Object.keys(icons[actualKey].projects);
   // For each project...
-  projectKeys.forEach(function (projectKey,index) {
+  projectKeys.forEach(function (projectKey, index) {
     let projectIconSrc = icons[actualKey].projects[projectKey].iconImgSrc;
     // Create an image element
     let projectIcon = document.createElement("IMG");
     projectIcon.setAttribute("src", projectIconSrc);
-    projectIcon.setAttribute("width", `${100/projectKeys.length}%`);
+    projectIcon.setAttribute("width", `${100 / projectKeys.length}%`);
     projectIcon.setAttribute("alt", "Project preview");
     projectIcon.classList.add("projectsIcon");
     document.getElementById("projIconsDiv").appendChild(projectIcon);
     // Delay the animation from one project to the other so we don't see the same colors at the same time
-    projectIcon.style.animationDelay = ` ${3*index}s, 1.5s`;
-    projectIcon.onmouseover = function() {
+    projectIcon.style.animationDelay = ` ${3 * index}s, 1.5s`;
+    projectIcon.onmouseover = function () {
       // Make related field icons turn pink
-      let projectFields = icons[actualKey].projects[projectKey].projectRelatedFields;
-      for (let i=0; i<projectFields.length; i++) {
-        document.getElementById(projectFields[i]).style.backgroundColor = "#e4bafa";
+      let projectFields =
+        icons[actualKey].projects[projectKey].projectRelatedFields;
+      for (let i = 0; i < projectFields.length; i++) {
+        document.getElementById(projectFields[i]).style.backgroundColor = "rgb(245, 165, 200)";
       }
-    }
-    projectIcon.onmouseout = function() {
+    };
+    projectIcon.onmouseout = function () {
       let fieldsIcons = document.getElementsByClassName("fields");
-      for (let i=0; i<fieldsIcons.length; i++) {
+      for (let i = 0; i < fieldsIcons.length; i++) {
         fieldsIcons[i].style.backgroundColor = "rgb(128, 128, 128)";
       }
-
-    }
+    };
     //
     projectIcon.onclick = function () {
       // scroll to the project location
