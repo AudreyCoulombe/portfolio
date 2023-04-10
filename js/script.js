@@ -332,55 +332,15 @@ function iconClicked(clickedIcon) {
 function showRelatedFields(actualKey) {
   // Assign related fields IDs to a variable
   let relatedFieldsID = icons[actualKey].idRelatedFields;
-  // For every related field...  add a css class to make it fade in and create a new line
-  for (let i = 0; i < relatedFieldsID.length; i++) {
-    // Create a new line
-    // let line = createLine();
-    // let mainIcon = icons[actualKey].icon;
-    let relatedIcon = document.getElementById(relatedFieldsID[i]);
-
-    // If we are at the first related field (which should be the main field)...
-    if (i == 0) {
-      let fieldsDiv = document.getElementById("otherFields");
-      fieldsDiv.insertBefore(relatedIcon, fieldsDiv.firstChild);
-      relatedIcon.classList.remove("fields");
-      relatedIcon.classList.add("mainField");
-      // relatedIcon.style.backgroundColor = "rgb(128, 128, 128)";
-    }
-    
+  let mainField = document.getElementById(relatedFieldsID[0]);
+  let fieldsDiv = document.getElementById("allFields");
+  
+  fieldsDiv.insertBefore(mainField, fieldsDiv.firstChild);
+  mainField.classList.remove("fields");
+  mainField.classList.add("mainField");
+  fieldsDiv.classList.add("fadeIn");
 
 
-    // line.setAttribute("opacity", "0");
-    // Add a css class that makes the related field and the line fade in
-    relatedIcon.classList.add("fadeIn");
-    // line.classList.add("fadeIn");
-
-    // ARCHIVES: TESTS FOR POSITIONING LINE
-    // let $relatedIconPos = $(`#${relatedFieldsID[i]}`).position();
-    // let $relatedIconPos = $(`#${relatedFieldsID[i]}`).position();
-    // let pos = relatedIcon.getBoundingClientRect();
-    // let relatedIconPos = offset(relatedIcon);
-    // let relatedIconPosX = pos.left - iconsDivPos.left;
-    // let relatedIconPosY = pos.top-iconsDivPos.top;
-    // let iconsDivPos = document.getElementById("iconsDiv").getBoundingClientRect();
-    // let iconsDiv = document.getElementById("iconsDiv");
-    // let fieldsDiv = document.getElementById("otherFields");
-
-    // let linesDivPos = document.getElementById("icon_lines").getBoundingClientRect();
-    // let relatedIconPos = relatedIcon.getBoundingClientRect();
-    // let xPos = relatedIconPos.width / 2 + relatedIconPos.x - linesDivPos.x;
-    // let yPos = relatedIconPos.height / 2 + relatedIconPos.y - linesDivPos.y;
-
-    // // Update the position of the lines according to the position of the related fields
-    // setInterval(function () {
-    //   line.setAttribute("x1", mainIcon.offsetLeft);
-    //   line.setAttribute("y1", mainIcon.offsetTop);
-    //   line.setAttribute("x2", xPos); // ISSUE!
-    //   line.setAttribute("y2", yPos); // ISSUE!
-    //   // line.setAttribute("x2", relatedIconPos.left);
-    //   // line.setAttribute("y2", relatedIconPos.top);
-    // }, 5);
-  }
 }
 
 function displayPrjsIcons(actualKey) {
@@ -388,6 +348,7 @@ function displayPrjsIcons(actualKey) {
   // For each project...
   projectKeys.forEach(function (projectKey, index) {
     let projectIconSrc = icons[actualKey].projects[projectKey].iconImgSrc;
+    
     // Create an image element
     let projectIcon = document.createElement("IMG");
     projectIcon.setAttribute("src", projectIconSrc);
@@ -395,23 +356,27 @@ function displayPrjsIcons(actualKey) {
     projectIcon.setAttribute("alt", "Project preview");
     projectIcon.classList.add("projectsIcon");
     document.getElementById("projIconsDiv").appendChild(projectIcon);
+    
     // Delay the animation from one project to the other so we don't see the same colors at the same time
     projectIcon.style.animationDelay = ` ${3 * index}s, 1.5s`;
+
+    // When the mouse is over the project icon...
     projectIcon.onmouseover = function () {
+      let projectFields = icons[actualKey].projects[projectKey].projectRelatedFields;
       // Make related field icons turn pink
-      let projectFields =
-        icons[actualKey].projects[projectKey].projectRelatedFields;
       for (let i = 0; i < projectFields.length; i++) {
         document.getElementById(projectFields[i]).style.backgroundColor = "rgb(245, 165, 200)";
       }
     };
+    // When the mouse goes out of the project icon...
     projectIcon.onmouseout = function () {
       let fieldsIcons = document.getElementsByClassName("fields");
+      // Make related field icons turn back to grey
       for (let i = 0; i < fieldsIcons.length; i++) {
         fieldsIcons[i].style.backgroundColor = "rgb(128, 128, 128)";
       }
     };
-    //
+    // When the project icon is clicked...
     projectIcon.onclick = function () {
       // scroll to the project location
     };

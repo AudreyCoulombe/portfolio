@@ -84,34 +84,6 @@
     cursor: pointer;
 }
 
-/* #fashion_icon {
-    left: 11%;
-    top:15%;
-    animation-name:fashionAnim;
-    animation-duration: 6s;
-    animation-timing-function:linear;
-}
-
-@keyframes fashionAnim {
-    0%   {left:11%; top:15%;}
-    25%   {left:13%; top:17%;}
-    50%   {left:9%; top:13%;}
-    75%   {left:12%; top:10%;}
-    100%   {left:11%; top:15%;}
-  } */
-
-  /* .iconClicked {
-    width: 17%;
-    animation-name:iconClickedAnim;
-    animation-duration: 1s;
-    animation-timing-function:ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0.7s;
-}
-  @keyframes iconClickedAnim {
-    100%   {left:5%; top:10%;}
-  } */
-
 #icon_lines{
     width: 100%;
     height:100%;
@@ -185,80 +157,133 @@ font-family: 'Titillium Web SemiBold';font-size: 22px;
 manque bold!!!
 font-family: 'Titillium Web Black';font-size: 22px; */
 
-#otherFields {
-    position:absolute;
+.allFields {
     margin: 0px 0px;
     padding: 0px 0px;
-    width:0px;
-    /* min-width: 60px; */
-    height:auto;
-    top:50%;
-    left:4%;
+    width:max-content;
+    height:100%;
+    top:0%;
+    left:0%;
+    position:absolute;
     justify-content: space-evenly;
-    border-style: dotted; border-color: antiquewhite;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    border-style: dotted; border-color: rgb(0, 255, 81);
+    align-items:center;
+    opacity: 0;
+    display:inline-block;
 }
 
+.fields{
+    width:8.5vh;
+    min-width: 60px;
+    height:8.5vh;
+    min-height: 60px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 100%;
+    text-align: center;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 0.5vh;
+    padding: 0px 0px;
+    left:50%;
+    color: white;
+    font-family: 'Titillium Web Regular';
+    font-size: max(1.6vh, 12px);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.mainField{
+    width:11vh;
+    min-width: 65px;
+    height:11vh;
+    min-height: 65px;
+    background-color: white;
+    /* background-color: rgb(245, 230, 255); */
+    border-radius: 100%;
+    text-align: center;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 2vh;
+    padding: 0px 0px;
+    left:50%;
+    color: rgb(76, 76, 76);
+    font-family: 'Titillium Web Regular';
+    font-size: max(1.7vh, 14px);
+    display: flex; /****for horizontal display: inline-flex****/
+    justify-content:center;
+    align-items:center;
+    /* vertical-align: top; */
+    filter: drop-shadow(0px 0px 20px rgb(100, 255, 255));
+}
+
+/* ***********************Pour display fields horizontally: ********************************/
+/* .allFields {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    width:max-content;
+    height:0px;
+    top:10%;
+    left:50%;
+    position:absolute;
+    justify-content: space-evenly;
+    border-style: dotted; border-color: rgb(0, 255, 81);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    align-items:center;
+    opacity: 0; */
+    /* display:none; */
+    /* display:inline-block;
+} */
+/* 
 .fields{
     width:5vw;
     min-width: 60px;
     height:5vw;
     min-height: 60px;
-    /* background-color: #e4bafa; */
     background-color: rgb(128, 128, 128);
-    
-    /* background-color: rgb(47, 208, 223); */
-
-    /* background-color: #ed8bd8; */
     border-radius: 100%;
     text-align: center;
-    /* display:none; */
-    /* opacity: 0; */
     opacity: 1;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0px 0px;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%)
-}
-
-.fields p {
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top:50%;
     color: white;
-    padding-top: 15%;
     font-family: 'Titillium Web Regular';
     font-size: max(1vw, 12px);
- }
+    display: inline-flex;
+    justify-content:center;
+    align-items:center;
+    vertical-align: top;
+} */
 
-.mainField{
+/* .mainField{
     width:6vw;
     min-width: 65px;
     height:6vw;
     min-height: 65px;
     background-color: white;
-    filter: drop-shadow(0px 0px 20px rgb(165, 245, 245));
     border-radius: 100%;
     text-align: center;
-    display:none;
-    opacity: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0px 0px;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%)
-}
-
-.mainField p {
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top:50%;
     color: rgb(128, 128, 128);
-    padding-top: 15%;
-    font-family: 'Titillium Web semibold';
-    font-size: max(1.2vw, 12px);
- }
-
-
-
-
-
+    font-family: 'Titillium Web Regular';
+    font-size: max(1.1vw, 14px);
+    display: inline-flex;
+    justify-content:center;
+    align-items:center;
+    vertical-align: top;
+    filter: drop-shadow(0px 0px 20px rgb(165, 245, 245));
+} */
 
 .fadeIn {
     opacity: 0;
@@ -274,28 +299,14 @@ font-family: 'Titillium Web Black';font-size: 22px; */
   100% { opacity: 1 }
 }
 
-/* #projectsIcons{
-    position:relative;
-    margin: 0px 0px;
-    padding: 0px 0px;
-    width:63%;
-    min-width: 60px;
-    height:85%;
-    top:15%;
-    left:33%;
-    justify-content: space-evenly;
-    border-style: dotted; border-color: rgb(255, 0, 230);
-} */
-
 #projIconsDiv{
     position:absolute;
     margin: 0px 0px;
     padding: 0px 0px;
-    width:85%;
-    /* min-width: 60px; */
+    width:90%;
     height:0px;
     top:50%;
-    left:15%;
+    left:10%;
     justify-content: space-evenly;
     border-style: dotted; border-color: rgb(255, 0, 230);
     -ms-transform: translateY(-50%);
@@ -308,22 +319,29 @@ font-family: 'Titillium Web Black';font-size: 22px; */
     transform: translateY(-50%);
     /* -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); */
-    top: 50%;
+    /* top: 50%; */
+    /* width:30%; */
 
     opacity: 0;
-    animation-name:iridescenceAnim, fadeInSmoothAnim;
+    animation-name:iridescenceProjectAnim, fadeInSmoothAnim;
     animation-duration: 8s, 2s;
     animation-iteration-count: infinite, 1;
     animation-timing-function:linear;
     animation-fill-mode: forwards;
     /* animation-delay: 0s, 1.5s; */
     /* opacity: 0.5; */
-    filter:contrast(100%) hue-rotate(0deg) saturate(300%) drop-shadow(1px 1px 2px rgb(237, 237, 237));
+    filter:contrast(100%) hue-rotate(0deg) saturate(200%) drop-shadow(5px 5px 5px rgb(134, 134, 134));
 }
+
+@keyframes iridescenceProjectAnim {
+    0%   {filter:contrast(100%) hue-rotate(0deg) saturate(200%) drop-shadow(5px 5px 5px rgb(134, 134, 134));}
+    100%   {filter:contrast(100%) hue-rotate(360deg) saturate(200%) drop-shadow(5px 5px 5px rgb(134, 134, 134));}
+}
+
 
 @keyframes fadeInSmoothAnim {
     0% { opacity: 0 }
-    100% { opacity: 0.8 }
+    100% { opacity: 1 }
   }
 
 .projectsIcon:hover{
