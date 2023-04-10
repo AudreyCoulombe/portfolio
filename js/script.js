@@ -23,13 +23,7 @@ $(document).ready(function () {
   icons = {
     fashion: {
       icon: document.getElementById("fashion_icon"),
-      idRelatedFields: [
-        "fashion_field",
-        "electronics_field",
-        "coding_field",
-        "3Dmodeling_field",
-        "3Dprinting_field",
-      ],
+      idMainField: "fashion_field",
       projects: {
         printedTextiles: {
           iconImgSrc: "./assets/images/printedTextiles_icon.png",
@@ -75,17 +69,17 @@ $(document).ready(function () {
     },
     printing: {
       icon: document.getElementById("3Dprinting_icon"),
-      // idRelatedFields: [],
+      // idMainField: "3Dprinting_field",
       // projects: {},
     },
     modeling: {
       icon: document.getElementById("3Dmodeling_icon"),
-      // idRelatedFields: [],
+      // idMainField: "3Dmodeling_field",
       // projects: {},
     },
     animation: {
       icon: document.getElementById("animation_icon"),
-      idRelatedFields: ["animation_field","digitalTexts_field","graphicDesign_field"],
+      // idMainField: "animation_field",
       projects: {
         ModernTimes: {
           iconImgSrc: "",
@@ -102,7 +96,7 @@ $(document).ready(function () {
     },
     graphDesign: {
       icon: document.getElementById("graphicDesign_icon"),
-      idRelatedFields: ["graphicDesign_field","digitalTexts_field"],
+      idMainField: "graphicDesign_field",
       projects: {
         listenVSspeak: {
           iconImgSrc: "./assets/images/x.png",
@@ -119,12 +113,12 @@ $(document).ready(function () {
     },
     digiTxts: {
       icon: document.getElementById("digitalTexts_icon"),
-      // idRelatedFields: [],
+      // idMainField: "digitalTexts_field",
       // projects: {},
     },
     vr: {
       icon: document.getElementById("VR_icon"),
-      idRelatedFields: ["VR_field","coding_field", "animation_field", "3Dmodeling_field"],
+      idMainField: "VR_field",
       projects: {
         energyBeings: {
           iconImgSrc: "./assets/images/x.png",
@@ -159,7 +153,7 @@ $(document).ready(function () {
     },
     coding: {
       icon: document.getElementById("coding_icon"),
-      idRelatedFields: ["coding_field","digitalTexts_field"],
+      idMainField: "coding_field",
       projects: {
         algorithmicPortrait: {
           iconImgSrc: "./assets/images/x.png",
@@ -175,7 +169,7 @@ $(document).ready(function () {
     },
     electronics: {
       icon: document.getElementById("electronics_icon"),
-      idRelatedFields: ["electronics_field","coding_field", "3Dprinting_field", "3Dmodeling_field"],
+      idMainField: "electronics_field",
       projects: {
         fentalert: {
           iconImgSrc: "./assets/images/x.png",
@@ -283,7 +277,7 @@ $(document).ready(function () {
     if (actualIcon.classList.contains("icon")) {
       // Add a click event listener
       actualIcon.onclick = function () {
-        iconClicked(actualKey);
+        hideElements(actualKey);
         showRelatedFields(actualKey);
         displayPrjsIcons(actualKey);
       };
@@ -304,22 +298,14 @@ $(document).ready(function () {
   // updateIconPos();
 });
 
-function iconClicked(clickedIcon) {
-  // // Add a css class to animate the icon (goes to the left)
-  // icons[clickedIcon].icon.classList.add("iconClicked");
-  // document.getElementById("aura_bgIcon").classList.add("fadeIn");
+// Function to hide elements when an icon is clicked
+// Uses fadeOut() custom function for smooth transition
+function hideElements(clickedIcon) {
+  icons[clickedIcon].icon.style.transform = "translate(-50%, -50%) scale(1.5)";
   
-  setTimeout(function(){
-    fadeOut(icons[clickedIcon].icon);
-  },800);
-  
-
   // For each keys in the icon object...
   Object.keys(icons).forEach(function (iconKey) {
-    // If it's not the clicked icon, make it fade out
-    if (iconKey != clickedIcon) {
       fadeOut(icons[iconKey].icon);
-    }
   });
   // Make all the lines fade out
   Object.keys(lines).forEach(function (lineKey) {
@@ -329,61 +315,7 @@ function iconClicked(clickedIcon) {
   fadeOut(document.getElementById("iridescentCircle"));
 }
 
-function showRelatedFields(actualKey) {
-  // Assign related fields IDs to a variable
-  let relatedFieldsID = icons[actualKey].idRelatedFields;
-  let mainField = document.getElementById(relatedFieldsID[0]);
-  let fieldsDiv = document.getElementById("allFields");
-  
-  fieldsDiv.insertBefore(mainField, fieldsDiv.firstChild);
-  mainField.classList.remove("fields");
-  mainField.classList.add("mainField");
-  fieldsDiv.classList.add("fadeIn");
-
-
-}
-
-function displayPrjsIcons(actualKey) {
-  let projectKeys = Object.keys(icons[actualKey].projects);
-  // For each project...
-  projectKeys.forEach(function (projectKey, index) {
-    let projectIconSrc = icons[actualKey].projects[projectKey].iconImgSrc;
-    
-    // Create an image element
-    let projectIcon = document.createElement("IMG");
-    projectIcon.setAttribute("src", projectIconSrc);
-    projectIcon.setAttribute("width", `${100 / projectKeys.length}%`);
-    projectIcon.setAttribute("alt", "Project preview");
-    projectIcon.classList.add("projectsIcon");
-    document.getElementById("projIconsDiv").appendChild(projectIcon);
-    
-    // Delay the animation from one project to the other so we don't see the same colors at the same time
-    projectIcon.style.animationDelay = ` ${3 * index}s, 1.5s`;
-
-    // When the mouse is over the project icon...
-    projectIcon.onmouseover = function () {
-      let projectFields = icons[actualKey].projects[projectKey].projectRelatedFields;
-      // Make related field icons turn pink
-      for (let i = 0; i < projectFields.length; i++) {
-        document.getElementById(projectFields[i]).style.backgroundColor = "rgb(245, 165, 200)";
-      }
-    };
-    // When the mouse goes out of the project icon...
-    projectIcon.onmouseout = function () {
-      let fieldsIcons = document.getElementsByClassName("fields");
-      // Make related field icons turn back to grey
-      for (let i = 0; i < fieldsIcons.length; i++) {
-        fieldsIcons[i].style.backgroundColor = "rgb(128, 128, 128)";
-      }
-    };
-    // When the project icon is clicked...
-    projectIcon.onclick = function () {
-      // scroll to the project location
-    };
-  });
-}
-
-// function to make fadingElement fade and then stop displaying it
+// Function to make fadingElement fade and then stop displaying it
 function fadeOut(fadingElement) {
   let opacity = 1;
   // Interval to change opacity every 10 millis
@@ -399,7 +331,92 @@ function fadeOut(fadingElement) {
     opacity -= 0.01;
     // Assign new opacity value to element
     fadingElement.style.opacity = opacity;
-  }, 10);
+  }, 2);
+}
+
+// Function to show related fields icons on the left of the screen
+function showRelatedFields(actualKey) {
+  // Store the main field element in a variable
+  let mainField = document.getElementById(icons[actualKey].idMainField);
+  // Variable for the fields container
+  let fieldsDiv = document.getElementById("allFields");
+
+  // Make the main field appear first in the field container (on top left of the screen)
+  fieldsDiv.insertBefore(mainField, fieldsDiv.firstChild);
+  // Change css class of the main field
+  mainField.classList.remove("fields");
+  mainField.classList.add("mainField");
+  // Add a css class to the fields container the makes it fade in
+  fieldsDiv.classList.add("fadeIn");
+}
+
+// Function to display projects icons and handle mouseover and click events
+function displayPrjsIcons(actualKey) {
+  let projectKeys = Object.keys(icons[actualKey].projects);
+  let projectIsClicked = false;
+
+  // For each project...
+  projectKeys.forEach(function (projectKey, index) {
+    let project = icons[actualKey].projects[projectKey];
+    let projectIconSrc = project.iconImgSrc;
+    let mainField = document.getElementById(icons[actualKey].idMainField);
+    // Create an image element
+    let projectIcon = document.createElement("IMG");
+    projectIcon.setAttribute("src", projectIconSrc);
+    projectIcon.setAttribute("width", `${100 / projectKeys.length}%`);
+    projectIcon.setAttribute("alt", "Project preview");
+    projectIcon.classList.add("projectsIcon");
+    document.getElementById("projIconsDiv").appendChild(projectIcon);
+    // Delay the animation from one project to the other so we don't see the same colors at the same time
+    projectIcon.style.animationDelay = ` ${3 * index}s, 1.5s`;
+
+    // When the mouse is over the project icon...
+    projectIcon.onmouseover = function () {
+      // If the project was not clicked...
+      if (projectIsClicked == false) {
+        let projectFields = project.projectRelatedFields;
+        projectIcon.style.transform = "translateY(-50%) scale(1.3)";
+        projectIcon.style.zIndex = "6000";
+        // Make related field icons turn pink
+        for (let i = 0; i < projectFields.length; i++) {
+          document.getElementById(projectFields[i]).style.backgroundColor="rgb(245, 165, 200)";
+        }
+        // Add css class to animate the main field
+        setTimeout(function () {
+          mainField.classList.add("animateMainField");
+        }, 2);
+      }
+    };
+    // When the mouse goes out of the project icon...
+    projectIcon.onmouseout = function () {
+      // If the project was not clicked...
+      if (projectIsClicked == false) {
+        let fieldsIcons = document.getElementsByClassName("fields");
+        projectIcon.style.transform = "translateY(-50%)";
+        projectIcon.style.zIndex = "1";
+        // Make related field icons turn back to grey
+        for (let i = 0; i < fieldsIcons.length; i++) {
+          fieldsIcons[i].style.backgroundColor = "rgb(128, 128, 128)";
+        }
+        // Remove the css class that animated the main field
+        mainField.classList.remove("animateMainField");
+      }
+    };
+
+    // When the project icon is clicked...
+    projectIcon.onclick = function () {
+      projectIsClicked = true;
+      projectIcon.style.transform = "translateY(-50%) scale(1.3)";
+      projectIcon.style.zIndex = "6000";
+      fadeOut(document.getElementById("projIconsDiv"));
+      
+      displayProject(project, projectIcon);
+    };
+  });
+}
+
+function displayProject(project, projectIcon) {
+  // projectIcon.src = "newImage";
 }
 
 // function to create new svg lines
